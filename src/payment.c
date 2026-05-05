@@ -1,14 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   payment.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 23:32:12 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/05 23:38:14 by alexis_marech    ###   ########.fr       */
+/*   Created: 2026/05/05 23:31:41 by alexis_marech     #+#    #+#             */
+/*   Updated: 2026/05/05 23:36:32 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	delete_record(void);
-int		view_payment(void);
+#include <stdio.h>
+#include <stdlib.h>
+
+int	view_payment(void)
+{
+	printf("view payment");
+	return (0);
+}

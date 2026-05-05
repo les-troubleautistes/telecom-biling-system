@@ -6,11 +6,12 @@
 #    By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/05 23:17:06 by alexis_marech     #+#    #+#              #
-#    Updated: 2026/05/05 23:21:15 by alexis_marech    ###   ########.fr        #
+#    Updated: 2026/05/05 23:37:03 by alexis_marech    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all:
+	norminette src/
 	gcc -o biling src/*.c 
 clean:
 	rm biling 
