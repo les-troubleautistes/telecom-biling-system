@@ -6,7 +6,7 @@
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 23:31:41 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/05 23:36:32 by alexis_marech    ###   ########.fr       */
+/*   Updated: 2026/05/05 23:43:17 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int	view_payment(void)
 {
-	printf("view payment");
+	printf("view payment\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 23:16:03 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/05 23:30:17 by alexis_marech    ###   ########.fr       */
+/*   Updated: 2026/05/05 23:43:37 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@
 //delete record btw
 void	delete_record(void)
 {
-	printf("record deleted");
+	printf("record deleted\n");
 }

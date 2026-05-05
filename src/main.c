@@ -6,7 +6,7 @@
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 23:09:21 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/05 23:34:19 by alexis_marech    ###   ########.fr       */
+/*   Updated: 2026/05/05 23:42:58 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 int	main(int argc, char *argv[])
 {
 	delete_record();
+	view_payment();
 	return (0);
 }
