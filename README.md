@@ -6,14 +6,14 @@
 <!-- By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+       -->
 <!--                                              +#+#+#+#+#+   +#+          -->
 <!-- Created: 2026/05/05 23:22:34 by alexis_marech     #+#    #+#            -->
-<!-- Updated: 2026/05/05 23:22:34 by alexis_marech    ###   ########.fr      -->
+<!-- Updated: 2026/05/06 01:04:21 by selkij           ###   ########.fr      -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
 # telecom-biling-system
-A basic telecom biling system write in C for 42 trainig
+A basic telecom billing system written in C for 42 training
 
-Package needed:
+Packages needed:
 - norminette
-- gcc and it depedencies (ld...)
+- gcc and its depedencies (ld, ...)
 
