@@ -14,14 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: configure
-      run: ./configure
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
 
-    - name: Install dependencies
-      run: make
-
+    - name: Install norminette
+      run: pip install norminette
+    
     - name: Norminette check
       run: make check
 
-    - name: Run distcheck
-      run: make distcheck
+    - name: Compile
+      run: make 
