@@ -6,7 +6,7 @@
 #    By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/06 13:42:13 by alexis_marech     #+#    #+#              #
-#    Updated: 2026/05/06 13:42:13 by alexis_marech    ###   ########.fr        #
+#    Updated: 2026/05/06 14:43:00 by alexis_marech    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all:
 clean:
 	rm billing 
 rebuild:
-	rm biling
+	rm billing
 	norminette src/
 	gcc -o biling src/*.c 
 run:
