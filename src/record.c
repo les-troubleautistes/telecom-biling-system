@@ -6,36 +6,87 @@
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 01:03:54 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/06 15:17:53 by selkij           ###   ########.fr       */
+/*   Updated: 2026/05/06 23:55:02 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "record.h"
-
-void	new_record(struct s_customer *customer, float usage, float total_bill)
+#include "customer.h"
+#include <string.h>
+// Function to add a new customer record
+void addRecord()
 {
-	printf("t");
+    if (customerCount < 100) {
+        printf("\nEnter name: ");
+        scanf(" %[^\n]s", customers[customerCount].name);
+        printf("Enter phone number: ");
+        scanf("%s", customers[customerCount].phoneNumber);
+        printf("Enter usage (in minutes): ");
+        scanf("%f", &customers[customerCount].usage);
+        customers[customerCount].totalBill
+            = customers[customerCount].usage * 0.1;
+        customerCount++;
+        printf("\nRecord added successfully!\n");
+    }
+    else {
+        printf("\nMaximum number of records reached!\n");
+    }
 }
 
-void	get_records(const char *customer_name, const char *customer_number)
+// Function to view the list of customer records
+void viewRecords()
 {
-	printf("f");
+    printf("\nName\tPhone Number\tUsage(min)\tTotal "
+           "Bill($)\n");
+    for (int i = 0; i < customerCount; i++) {
+        printf("%s\t%s\t%.2f\t\t%.2f\n", customers[i].name,
+               customers[i].phoneNumber, customers[i].usage,
+               customers[i].totalBill);
+    }
 }
 
-void	modify_record(void)
+// Function to modify a customer record
+void modifyRecord(char phoneNumber[])
 {
-	printf("p");
+    for (int i = 0; i < customerCount; i++) {
+        if (strcmp(customers[i].phoneNumber, phoneNumber)
+            == 0) {
+            printf(
+                "\nEnter new usage (in minutes) for %s: ",
+                customers[i].name);
+            scanf("%f", &customers[i].usage);
+            customers[i].totalBill
+                = customers[i].usage * 0.1;
+            printf("\nRecord modified successfully!\n");
+            return;
+        }
+    }
+    printf("\nRecord not found!\n");
 }
 
-void	search_record(void)
-{
-	printf("RECORD SEARCHED BIP BOUP\n");
+void searchRecord(char phoneNumber[]) {
+    printf("\nName\tPhone Number\tUsage(min)\tTotal Bill($)\n");
+    for (int i = 0; i < customerCount; i++) {
+        if (strcmp(customers[i].phoneNumber, phoneNumber) == 0) {
+            printf("%s\t%s\t%.2f\t\t%.2f\n", customers[i].name, customers[i].phoneNumber, customers[i].usage, customers[i].totalBill);
+            return;
+        }
+    }
+    printf("\nRecord not found!\n");
 }
 
-//delete record btw
-void	delete_record(void)
-{
-	printf("record deleted\n");
+void deleteRecord(char phoneNumber[]) {
+    for (int i = 0; i < customerCount; i++) {
+        if (strcmp(customers[i].phoneNumber, phoneNumber) == 0) {
+            for (int j = i; j < customerCount - 1; j++) {
+                customers[j] = customers[j + 1];
+            }
+            customerCount--;
+            printf("\nRecord deleted successfully!\n");
+            return;
+        }
+    }
+    printf("\nRecord not found!\n");
 }

@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   customer.h                                         :+:      :+:    :+:   */
+/*   payment.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/06 23:57:45 by alexis_marech     #+#    #+#             */
-/*   Updated: 2026/05/06 23:59:32 by alexis_marech    ###   ########.fr       */
+/*   Created: 2026/05/06 23:53:09 by alexis_marech     #+#    #+#             */
+/*   Updated: 2026/05/06 23:53:09 by alexis_marech    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUSTOMER_H
-# define CUSTOMER_H
+#ifndef PAYMENT_H
+# define PAYMENT_H
 
-typedef struct s_customer
-{
-	char	name[50];
-	char	phoneNumber[15];
-	float	usage;
-	float	totalBill;
-}	t_customer;
-
-extern t_customer	customers[100];
-extern int			customerCount;
+void	viewPayment(char *phone_number);
 
 #endif

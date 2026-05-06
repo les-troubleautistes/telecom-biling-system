@@ -6,7 +6,7 @@
 #    By: alexis_marechal <michalex37@proton.me>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/06 13:42:13 by alexis_marech     #+#    #+#              #
-#    Updated: 2026/05/06 14:43:00 by alexis_marech    ###   ########.fr        #
+#    Updated: 2026/05/07 00:01:16 by alexis_marech    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,3 +34,5 @@ run:
 	./billing
 check:
 	norminette src/
+wchbuild:
+	gcc -Wall -Wextra -Werror -o billing src/*.c
